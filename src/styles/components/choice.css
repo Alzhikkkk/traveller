@@ -1,0 +1,132 @@
+.choice{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    height: 50vh;
+    box-sizing: border-box;
+    background: url('../../assets/beach.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.choice::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.choice-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+.choice-text h1{
+    font-size: 45px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+.choice-text h3{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.choice-info{
+    display: flex;
+}
+
+.choice-items{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+     z-index: 1;
+}
+
+.choice-items img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    filter: invert(95%) sepia(73%) saturate(6187%) hue-rotate(321deg) brightness(100%) contrast(99%);
+}
+
+.choice-items span:first-child{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice-items span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    gap: 20px;
+    align-items: center;
+}
+
+.choice-items span p{
+    font-size: 18px;
+    font-weight: 400;
+    width: 70%;
+    line-height: 25px;
+}
+
+
+@media (max-width: 769px), (max-height: 700px) {
+    .choice-info{
+        gap: 20px;
+    }
+    .choice-items span p{
+        display: none;
+    }
+}
+
+@media (max-width: 415px) {
+    .choice{
+        gap: 25px;
+    }
+    .choice-info{
+        flex-direction: column;
+    }
+
+    .choice-text, .choice-items{
+        gap: 10px
+    }
+    
+    .choice-text h1{
+        font-size: 20px;
+    }
+
+    .choice-text h3{
+        font-size: 13px;
+    }
+
+    .choice-items span{
+        font-size: 15px;
+    }
+}
